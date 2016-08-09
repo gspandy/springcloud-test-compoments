@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: HelloServer
+server:
+  port: 8381
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    registryFetchIntervalSeconds: 8
+    serviceUrl:
+      defaultZone:  http://localhost:8761/eureka
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  refresh:
+    enabled: true
